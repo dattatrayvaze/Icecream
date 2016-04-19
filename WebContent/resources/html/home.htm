@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/app.css" rel="stylesheet">
+</head>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src = "../js/angular-route.min.js"></script>
+<script src = "../js/home.js"></script>
+<script src = "../js/services/services.js"></script>
+<body class="icecream-background">
+	<div ng-app="home" ng-controller="homeController">
+		<div style="float:left">
+        	<img alt="Baskin Robins Logo Image" class="img-rounded" src="../images/Baskin-Robbins-Logo.png"></img>
+    	</div>
+    	<div style="float:right">
+	        <div class="well well-sm">
+	        <i style="font-family: verdena;color:blue">Hello {{username}},</i>
+	            <a href="#" class="btn btn-danger btn-sm">
+	                <span class="glyphicon glyphicon-off"></span> Logout 
+	            </a>
+	        </div>
+    	</div>
+	    <div>
+	        <div class="well well-sm">
+	            <ul class="nav nav-pills">
+	                <li class="active"><a href="#">Home</a></li>
+	                <li><a href="#candy">Candy</a></li>
+	                <li><a href="#">Single Scoop</a></li>
+	                <li><a href="#">Double Scoop</a></li>
+	                <li><a href="#">Sunday</a></li>
+	                <li><a href="#">Family Pack</a></li>
+	                <li><a href="#">Make My Own</a></li>
+	            </ul>
+	        </div>
+	    </div>
+		<div class="container">
+			<div class="jumbotron" style="background-color:lavenderblush;">
+		    	<div class="row" ng-repeat="rows in icecreams">
+		        	<div class="col-lg-3" style="background-color:lavenderblush;" ng-repeat="icecream in rows">
+		            	<img src="../images/{{icecream.image}}" class="img-thumbnail"  width="200" height="200">
+		                    {{icecream.flavour}} Rs.{{icecream.price}}/-
+		            </div>
+		        </div>
+		        <ul class="pager">
+		           <li ng-click="prev()" ng-hide="prevswitch"><a href="#">Previous</a></li>
+		           <li ng-click="next()" ng-hide="nextswitch"><a href="#">Next</a></li>
+		        </ul>
+		        <ul class="pager">
+		           <li ng-click="testSuccess()" ><a href="#">Success</a></li>
+		           <li ng-click="testError()" ><a href="#">Fail</a></li>
+		        </ul>
+		     </div>
+		</div>
+		<div ng-view></div>
+    </div>
+</body>
+</html>

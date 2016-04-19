@@ -1,0 +1,20 @@
+<div ng-controller="candyController">
+<div class="container">
+	<div class="jumbotron" style="background-color:lavenderblush;">
+	<div class="row" ng-repeat="rows in icecreams">
+	<div class="col-lg-3" style="background-color:lavenderblush;" ng-repeat="icecream in rows">
+	<img src="../images/{{icecream.image}}" class="img-thumbnail"  width="200" height="200">
+		{{icecream.flavour}} Rs.{{icecream.price}}/-
+		            </div>
+		        </div>
+		        <ul class="pager">
+		           <li ng-click="prev()" ng-hide="prevswitch"><a href="#">Previous</a></li>
+		           <li ng-click="next()" ng-hide="nextswitch"><a href="#">Next</a></li>
+		        </ul>
+		        <ul class="pager">
+		           <li ng-click="testSuccess()" ><a href="#">Success</a></li>
+		           <li ng-click="testError()" ><a href="#">Fail</a></li>
+		        </ul>
+		     </div>
+		</div>
+</div>

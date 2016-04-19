@@ -1,0 +1,45 @@
+#main_wrapper{
+ background: url("../images/ice-cream-01.jpg");
+ background-size: 100% 100%;  // or cover like Ben Dyer states
+ background-repeat: no-repeat;
+ height: 800px;
+}
+
+.loginBox {
+width:300px;
+height:200px;
+float:center;
+border:1px solid black;
+background-color:#666666;
+position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+.btn-login {
+margin-left: 10%;
+    width:80%;
+}
+.inputBox {
+padding: 4px;
+}
+.inputb{
+padding: 4px;
+margin-left: 10%;
+    width:80%;
+
+}
+
+.panalt {
+    text-decoration-color: antiquewhite;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    font-style: italic;
+    
+}
+.icecream-background {
+    background: url("../images/icecream-background.jpg"); 
+}
